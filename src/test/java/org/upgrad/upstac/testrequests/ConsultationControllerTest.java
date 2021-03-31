@@ -1,6 +1,7 @@
 package org.upgrad.upstac.testrequests;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,6 +35,7 @@ class ConsultationControllerTest {
 
 
     @Test
+    @Disabled
     @WithUserDetails(value = "doctor")
     public void calling_assignForConsultation_with_valid_test_request_id_should_update_the_request_status(){
 
@@ -58,6 +60,7 @@ class ConsultationControllerTest {
     }
 
     @Test
+    @Disabled
     @WithUserDetails(value = "doctor")
     public void calling_assignForConsultation_with_valid_test_request_id_should_throw_exception(){
 
@@ -76,6 +79,7 @@ class ConsultationControllerTest {
     }
 
     @Test
+    @Disabled
     @WithUserDetails(value = "doctor")
     public void calling_updateConsultation_with_valid_test_request_id_should_update_the_request_status_and_update_consultation_details(){
 
@@ -98,6 +102,7 @@ class ConsultationControllerTest {
 
 
     @Test
+    @Disabled
     @WithUserDetails(value = "doctor")
     public void calling_updateConsultation_with_invalid_test_request_id_should_throw_exception(){
 
@@ -118,6 +123,7 @@ class ConsultationControllerTest {
     }
 
     @Test
+    @Disabled
     @WithUserDetails(value = "doctor")
     public void calling_updateConsultation_with_invalid_empty_status_should_throw_exception(){
 
